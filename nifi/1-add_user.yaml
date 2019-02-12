@@ -4,5 +4,5 @@
   tasks:
     - name: Add the NiFi User
       user:
-        name: {{ nifi_user }}
+        name: "{{ nifi_user }}"
         shell: /bin/bash
