@@ -1,0 +1,11 @@
+---
+- name: Install Filebeat
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - apt:
+      name: filebeat
+      state: present
+      update_cache: yes
