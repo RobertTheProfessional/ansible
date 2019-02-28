@@ -1,0 +1,10 @@
+---
+- name: Install auditd
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - apt:
+      name: auditd
+      state: present
