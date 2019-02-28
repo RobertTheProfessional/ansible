@@ -1,0 +1,10 @@
+---
+- name: Start Filebeat
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - systemd:
+      name: filebeat
+      state: started
