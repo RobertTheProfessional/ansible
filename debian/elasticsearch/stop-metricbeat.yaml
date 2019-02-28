@@ -1,0 +1,10 @@
+---
+- name: Stop Metricbeat
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - systemd:
+      name: metricbeat
+      state: stopped
