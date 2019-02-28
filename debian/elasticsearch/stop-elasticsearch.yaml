@@ -1,0 +1,10 @@
+---
+- name: Stop Elasticsearch
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - systemd:
+      name: elasticsearch
+      state: stopped
