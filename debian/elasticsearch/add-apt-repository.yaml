@@ -1,0 +1,22 @@
+---
+- name: Add Elasticsearch APT Repository
+  hosts: all
+  
+  tasks:
+  
+  - name: Import Elasticsearch GPG Key
+    apt_key:
+      url: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+      state: present
+
+  - name: Install apt-transport-https if necessary
+    apt:
+      name: apt-transport-https
+      state: present
+      update_cache: yes
+
+  - name: Install the Elasticsearch APT Repository
+    apt_repository:
+      repo: deb https://artifacts.elastic.co/packages/6.x/apt stable main
+      filename: elastic-6.x.list
+      state: present
