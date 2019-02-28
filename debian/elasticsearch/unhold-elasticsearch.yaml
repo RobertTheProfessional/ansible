@@ -1,0 +1,8 @@
+---
+- name: Unhold the Elasticsearch package
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - shell: apt-mark unhold elasticsearch
