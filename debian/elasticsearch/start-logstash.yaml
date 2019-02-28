@@ -1,0 +1,10 @@
+---
+- name: Start Logstash
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - systemd:
+      name: logstash
+      state: started
