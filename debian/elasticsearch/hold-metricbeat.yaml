@@ -1,0 +1,8 @@
+---
+- name: Hold the Metricbeat package at its current installed version
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - shell: apt-mark hold metricbeat
