@@ -1,0 +1,10 @@
+---
+- name: Stop Logstash
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - systemd:
+      name: logstash
+      state: stopped
