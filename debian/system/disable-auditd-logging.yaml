@@ -1,0 +1,8 @@
+---
+- name: Stop journald from listening to audit messages
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - shell: systemctl mask systemd-journald-audit.socket
