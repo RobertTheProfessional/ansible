@@ -1,0 +1,10 @@
+---
+- name: Start Metricbeat
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - systemd:
+      name: metricbeat
+      state: started
