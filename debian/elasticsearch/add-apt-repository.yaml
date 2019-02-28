@@ -1,5 +1,6 @@
 ---
 - name: Add Elasticsearch APT Repository
+  become: yes
   hosts: all
   
   tasks:
