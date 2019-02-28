@@ -1,0 +1,10 @@
+---
+- name: Start Kibana
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - systemd:
+      name: kibana
+      state: started
