@@ -1,0 +1,11 @@
+---
+- name: Install Elasticsearch
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - apt:
+      name: elasticsearch
+      state: present
+      update_cache: yes
