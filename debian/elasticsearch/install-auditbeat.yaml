@@ -1,0 +1,11 @@
+---
+- name: Install Auditbeat
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - apt:
+      name: auditbeat
+      state: present
+      update_cache: yes
