@@ -1,0 +1,10 @@
+---
+- name: Stop Filebeat
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - systemd:
+      name: filebeat
+      state: stopped
