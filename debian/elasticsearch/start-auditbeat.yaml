@@ -1,0 +1,10 @@
+---
+- name: Start Auditbeat
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - systemd:
+      name: auditbeat
+      state: started
