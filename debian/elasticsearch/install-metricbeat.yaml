@@ -1,0 +1,11 @@
+---
+- name: Install Metricbeat
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - apt:
+      name: metricbeat
+      state: present
+      update_cache: yes
