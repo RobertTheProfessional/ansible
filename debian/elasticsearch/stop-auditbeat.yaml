@@ -1,0 +1,10 @@
+---
+- name: Stop Auditbeat
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - systemd:
+      name: auditbeat
+      state: stopped
