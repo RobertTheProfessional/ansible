@@ -1,0 +1,11 @@
+---
+- name: Disable X-Pack Security
+  hosts: all
+  become: yes
+
+  tasks:
+  
+  - lineinfile:
+      path: /etc/elasticsearch/elasticsearch.yaml
+      state: present
+      line: "xpack.security.http.ssl.enabled: false"
