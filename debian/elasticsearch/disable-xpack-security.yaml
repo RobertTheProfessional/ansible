@@ -8,4 +8,4 @@
   - lineinfile:
       path: /etc/elasticsearch/elasticsearch.yml
       state: present
-      line: "xpack.security.http.ssl.enabled: false"
+      line: "xpack.security.enabled: false"
