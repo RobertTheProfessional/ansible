@@ -6,6 +6,6 @@
   tasks:
   
   - lineinfile:
-      path: /etc/elasticsearch/elasticsearch.yaml
+      path: /etc/elasticsearch/elasticsearch.yml
       state: present
       line: "xpack.security.http.ssl.enabled: false"
