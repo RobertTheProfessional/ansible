@@ -1,0 +1,11 @@
+---
+- name: Upgrade Auditbeat
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - apt:
+      name: auditbeat
+      state: latest
+      update_cache: yes
