@@ -16,8 +16,14 @@
       state: present
       update_cache: yes
 
-  - name: Install the Elasticsearch APT Repository
+  - name: Remove the 6.x Elasticsearch APT Repository
     apt_repository:
       repo: deb https://artifacts.elastic.co/packages/6.x/apt stable main
       filename: elastic-6.x.list
+      state: absent
+
+  - name: Install the Elasticsearch APT Repository
+    apt_repository:
+      repo: deb https://artifacts.elastic.co/packages/7.x/apt stable main
+      filename: elastic-7.x.list
       state: present
