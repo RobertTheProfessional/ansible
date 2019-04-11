@@ -1,0 +1,10 @@
+---
+- name: Remove GeoIP Database
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - file:
+      path: /etc/elasticsearch/ingest-geoip
+      state: absent
