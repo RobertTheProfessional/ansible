@@ -1,0 +1,12 @@
+---
+- name: Upgrade Elasticsearch
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - apt:
+      name: elasticsearch
+      state: latest
+      update_cache: yes
+      upgrade: yes
