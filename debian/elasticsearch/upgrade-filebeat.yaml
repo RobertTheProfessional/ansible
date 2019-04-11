@@ -1,0 +1,11 @@
+---
+- name: Upgrade Filebeat
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - apt:
+      name: filebeat
+      state: latest
+      update_cache: yes
