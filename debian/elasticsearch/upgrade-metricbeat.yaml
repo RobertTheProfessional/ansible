@@ -1,0 +1,11 @@
+---
+- name: Upgrade Metricbeat
+  become: yes
+  hosts: all
+  
+  tasks:
+  
+  - apt:
+      name: metricbeat
+      state: latest
+      update_cache: yes
